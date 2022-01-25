@@ -13,18 +13,21 @@
             set { _valor = value; }
         }
 
-        //Metodos
+        
        
         public Dado()
         {
             Valor = _NoInicializado;
         }
 
+
+        //Constructor con un valor del dado
         public Dado(int valor)
         {
             Valor = valor;
         }
 
+        //Accion de tirar el dado 1 vez
         public void Tirar ()
         {
             var random = new Random();
@@ -32,6 +35,11 @@
             Valor = elNumero;
         }
 
+        /// <summary>
+        /// Accion de tirar el dado n veces
+        /// </summary>
+        /// <param name="cantidadVeces"> Cantidad de veces que se tira el dado</param>
+        
         public void Tirar(int cantidadVeces)
         {
             for (int i = 0; i < cantidadVeces; i++)
